@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #fbeeee;
+  background-color: #f9eef0;
   margin: 0;
   padding: 2rem;
   color: #3c0d0d;
@@ -8,46 +8,46 @@ body {
 
 h1 {
   text-align: center;
-  color: #800020;
+  color: #5b0b15;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 1rem;
 }
 
 .ramo {
-  background-color: #fff0f5;
-  border: 2px solid #800020;
-  border-radius: 12px;
-  padding: 1rem;
+  background-color: #fff5f8;
+  border: 2px solid #5b0b15;
+  border-radius: 8px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
   position: relative;
+  min-height: 60px;
 }
 
 .ramo.locked {
-  background-color: #ddd;
+  background-color: #e0d1d4;
   border-color: #aaa;
-  cursor: not-allowed;
   color: #777;
+  cursor: not-allowed;
 }
 
 .ramo.approved {
-  background-color: #800020;
+  background-color: #5b0b15;
   color: white;
-  border-color: #4d0015;
+  border-color: #32060a;
 }
 
 .ramo::after {
   content: attr(data-sem);
-  font-size: 0.7em;
+  font-size: 0.75em;
   position: absolute;
-  top: 4px;
+  top: 6px;
   right: 8px;
-  color: #555;
+  color: #5b0b15;
 }
-
